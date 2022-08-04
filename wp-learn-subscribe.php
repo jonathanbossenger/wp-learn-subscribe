@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-add_shortcode( 'wp-subscribe', 'wps_subscribe_shortcode' );
-function wps_subscribe_shortcode() {
+add_shortcode( 'wp-subscribe', 'wpl_subscribe_shortcode' );
+function wpl_subscribe_shortcode() {
 	ob_start();
 	?>
 	<div class="wp-subscribe-subscribe">
