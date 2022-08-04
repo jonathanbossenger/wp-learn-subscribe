@@ -1,0 +1,34 @@
+{
+  "name": "wp-learn-subscribe",
+  "version": "1.0.0",
+  "description": "WP Learn Subscribe",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:md:docs": "wp-scripts lint-md-docs",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start",
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanbossenger/wp-learn-subscribe.git"
+  },
+  "author": "Jonathan Bossenger",
+  "license": "GPL-2.0-only",
+  "bugs": {
+    "url": "https://github.com/jonathanbossenger/wp-learn-subscribe/issues"
+  },
+  "homepage": "https://github.com/jonathanbossenger/wp-learn-subscribe#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^23.6.0"
+  }
+}

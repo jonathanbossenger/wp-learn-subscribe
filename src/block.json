@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/wp-learn-subscribe",
+	"version": "0.1.0",
+	"title": "WP Learn Subscribe",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Render a subscribe block anywhere on your site.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "wp-learn-subscribe",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
