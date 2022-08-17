@@ -25,7 +25,7 @@ import { useBlockProps } from '@wordpress/block-editor';
 export default function save() {
 	return (
 		<div {...useBlockProps.save()}>
-			<h>Subscribe!</h>
+			<h2>Subscribe!</h2>
 			<p>Visit our <a href="/subscribe">subscribe page</a> and sign up to get notified</p>
 		</div>
 	);
