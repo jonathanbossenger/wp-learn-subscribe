@@ -13,12 +13,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+define( 'WPL_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+
+add_action('wp_enqueue_scripts', 'wpl_subscribe_shortcode_scripts');
+function wpl_subscribe_shortcode_scripts() {
+	wp_register_style('wpl-subscribe-style', WPL_PLUGIN_URL . 'css/style.css', array(), '1.0.0');
+}
+
 add_shortcode( 'wp-subscribe', 'wpl_subscribe_shortcode' );
 function wpl_subscribe_shortcode() {
+	wp_enqueue_style( 'wpl-subscribe-style' );
 	ob_start();
 	?>
-	<div class="wp-subscribe-subscribe">
-		<h2>Subscribe!</h2>
+	<div class="wpl-subscribe-subscribe">
+        <h2 class="subscribe-header">Subscribe!</h2>
 		<p>Visit our <a href="/subscribe">subscribe page</a> and sign up to get notified</p>
 	</div>
 	<?php
