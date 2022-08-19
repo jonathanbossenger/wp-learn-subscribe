@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_action('wp_enqueue_scripts', 'wpl_subscribe_shortcode_scripts');
 function wpl_subscribe_shortcode_scripts() {
-	wp_register_style('wpl-subscribe-style', plugin_dir_url( __FILE__ ) . 'assets/css/style.css', array(), '1.0.0');
+	wp_register_style('wpl-subscribe-style', plugin_dir_url( __FILE__ ) . 'assets/css/style.css', array(), '1.2.0');
 }
 
 add_shortcode( 'wp-subscribe', 'wpl_subscribe_shortcode' );
