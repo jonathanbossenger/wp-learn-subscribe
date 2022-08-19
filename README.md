@@ -5,7 +5,7 @@ Example code for learning how to convert a shortcode into a block
 1. Node.js
 2. Npm
 
-The above are both installable via [nvm.sh](nvm.sh)
+The above are both installable via [nvm.sh](https://nvm.sh)
 
 [Check out this tutorial on setting up the requirements](https://learn.wordpress.org/tutorial/using-the-create-block-tool/)
 
