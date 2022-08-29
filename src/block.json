@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "wp-learn-subscribe/wp-learn-subscribe-block",
+	"name": "wp-learn-subscribe/subscribe-block",
 	"version": "0.1.0",
 	"title": "WP Learn Subscribe",
 	"category": "widgets",
@@ -9,6 +9,12 @@
 	"description": "Render a subscribe block anywhere on your site.",
 	"supports": {
 		"html": false
+	},
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "Subscribe!"
+		}
 	},
 	"textdomain": "wp-learn-subscribe",
 	"editorScript": "file:./index.js",

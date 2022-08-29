@@ -11,7 +11,17 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import {
+	useBlockProps,
+	InspectorControls
+} from '@wordpress/block-editor';
+
+import {
+	Panel,
+	PanelBody,
+	TextControl
+} from '@wordpress/components';
+
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -29,10 +39,21 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
+export default function Edit({attributes, setAttributes}) {
 	return (
 		<div {...useBlockProps()}>
-			<h2 className={"subscribe-header"}>Subscribe!</h2>
+			<InspectorControls key="setting">
+				<Panel>
+					<PanelBody title="Subscribe attributes" initialOpen={true}>
+						<TextControl className="blocks-base-control__input"
+							 label={"Heading"}
+							 value={attributes.heading}
+							 onChange={(val) => setAttributes({heading: val})}
+						/>
+					</PanelBody>
+				</Panel>
+			</InspectorControls>
+			<h2 className={"subscribe-header"}>{attributes.heading}</h2>
 			<p>Visit our <a href="/subscribe">subscribe page</a> and sign up to get notified</p>
 		</div>
 	);

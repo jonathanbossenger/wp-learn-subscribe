@@ -22,10 +22,11 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save(props) {
+	console.log(props);
 	return (
 		<div {...useBlockProps.save()}>
-			<h2 className={"subscribe-header"}>Subscribe!</h2>
+			<h2 className={"subscribe-header"}>{props.attributes.heading}</h2>
 			<p>Visit our <a href="/subscribe">subscribe page</a> and sign up to get notified</p>
 		</div>
 	);
